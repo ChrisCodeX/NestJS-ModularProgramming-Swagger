@@ -31,6 +31,14 @@ export class UsersController {
     };
   }
 
+  // Get user order
+  @Get('/:id/orders')
+  getOrders(@Param('id', ParseIntPipe) id: number) {
+    return {
+      message: this.userService.getOrderByUser(id),
+    };
+  }
+
   // Create a user
   @Post()
   create(@Body() payload: CreateUserDto) {

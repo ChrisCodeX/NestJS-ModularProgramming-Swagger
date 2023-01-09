@@ -3,6 +3,7 @@ import { ProductsService } from 'src/products/services/products.service';
 import { CreateUserDto, UpdateUserDto } from 'src/users/dtos/users.dto';
 import { User } from 'src/users/entities/user.entity';
 import { Order } from '../dtos/order.dto';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class UsersService {
@@ -15,9 +16,14 @@ export class UsersService {
       role: 'customer',
     },
   ];
-  constructor(private productsService: ProductsService) {}
+  constructor(
+    private productsService: ProductsService,
+    private configService: ConfigService,
+  ) {}
 
   findAll() {
+    const apiKey = this.configService.get<string>('API_KEY');
+    console.log(apiKey);
     return this.users;
   }
 

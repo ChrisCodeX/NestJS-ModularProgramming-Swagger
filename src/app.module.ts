@@ -9,7 +9,10 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    ConfigModule,
+    ConfigModule.forRoot({
+      envFilePath: './env',
+      isGlobal: true,
+    }),
     HttpModule,
     UsersModule,
     ProductsModule,

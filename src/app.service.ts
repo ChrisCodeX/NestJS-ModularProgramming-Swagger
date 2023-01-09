@@ -7,4 +7,8 @@ export class AppService {
   getHello(): string {
     return `Hello World! ${this.apiKey}`;
   }
+
+  hello(): string {
+    return 'xd';
+  }
 }

@@ -1,19 +1,22 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { PartialType } from '@nestjs/swagger';
+import { PartialType, ApiProperty } from '@nestjs/swagger';
 import { IsString, IsNotEmpty } from 'class-validator';
 
 @InputType()
 export class CreateCustomerDto {
+  @ApiProperty()
   @Field()
   @IsString()
   @IsNotEmpty()
   name: string;
 
+  @ApiProperty()
   @Field()
   @IsString()
   @IsNotEmpty()
   lastName: string;
 
+  @ApiProperty()
   @Field()
   @IsString()
   @IsNotEmpty()

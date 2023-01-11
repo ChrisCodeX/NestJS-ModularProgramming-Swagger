@@ -19,6 +19,7 @@ import config from 'config';
       isGlobal: true,
       validationSchema: Joi.object({
         API_KEY: Joi.number().required(),
+        DATABASE_NAME: Joi.string().required(),
       }),
     }),
     HttpModule,

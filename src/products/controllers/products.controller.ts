@@ -11,6 +11,7 @@ import {
   Query,
   ParseIntPipe,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 
 /* This is a pipe customized */
 // import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
@@ -21,6 +22,7 @@ import { ProductsService } from 'src/products/services/products.service';
 // Products Dto import
 import { CreateProductDto, UpdateProductDto } from '../dtos/products.dto';
 
+@ApiTags('products')
 @Controller('products')
 export class ProductsController {
   constructor(private productService: ProductsService) {}

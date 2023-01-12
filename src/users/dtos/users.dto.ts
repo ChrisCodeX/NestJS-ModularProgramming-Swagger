@@ -4,7 +4,7 @@ import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
 @InputType()
 export class CreateUserDto {
-  @ApiProperty()
+  @ApiProperty({ description: 'user email' })
   @Field()
   @IsNotEmpty()
   @IsEmail()

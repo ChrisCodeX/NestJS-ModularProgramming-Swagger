@@ -9,11 +9,11 @@ import {
   Post,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+
 import {
   CreateCategoryDto,
   UpdateCategoryDto,
 } from 'src/products/dtos/categories.dto';
-
 import { CategoriesService } from 'src/products/services/categories.service';
 
 @ApiTags('categories')

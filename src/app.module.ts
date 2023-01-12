@@ -17,6 +17,7 @@ import config from 'config';
       envFilePath: environments[process.env.NODE_ENV] || '.env',
       load: [config],
       isGlobal: true,
+      // config file validation
       validationSchema: Joi.object({
         API_KEY: Joi.number().required(),
         DATABASE_NAME: Joi.string().required(),

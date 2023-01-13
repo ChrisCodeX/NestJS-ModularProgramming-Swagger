@@ -1,12 +1,9 @@
 import { Inject, Injectable } from '@nestjs/common';
-// import { Inject } from '@nestjs/common';
-// import { ConfigService } from '@nestjs/config';
 import { ConfigType } from '@nestjs/config';
 import config from 'config';
 
 @Injectable()
 export class AppService {
-  // constructor(@Inject('API_KEY') private apiKey: string) {}
   constructor(
     @Inject(config.KEY) private configService: ConfigType<typeof config>,
   ) {}
@@ -16,9 +13,5 @@ export class AppService {
     const dbName = this.configService.database.name;
     console.log(apiKey);
     return `Hello World! ${apiKey} - ${dbName}`;
-  }
-
-  hello(): string {
-    return 'xd';
   }
 }

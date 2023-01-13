@@ -1,15 +1,20 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+<img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" />
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# NestJs - Modular Programming & Swagger
+
+This repository contains a REST API of Sales Store Application with in-memory data storage.
+Each application service is separated into modules that correspond to their respective domain and also each endpoint is documented using the Open API standard through Swagger.
 
 ## Installation
 
+- Install the necessary dependencies for this project
 ```bash
 $ npm install
 ```
+
+- The repository contains a file called .env.example which shows an example of the environment variables needed to run the application. In the root directory ("/") create an .env file and add the environment variables detailed in the .env.example file.
 
 ## Running the app
 
@@ -19,34 +24,13 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
+Once the application is running, access the following URI where you will find the documentation for each endpoint and Dto (Data Transfer Object).
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+/docs
+```
+URL example
+```
+http://localhost:3000/docs
+```
